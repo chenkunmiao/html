@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				width: 600px;
+				height: 400px;
+				position: absolute;
+				left: 500px;
+				top: 150px;
+				background-color: blanchedalmond;
+			}
+			ul{
+				height: 50px;
+				list-style: none;
+				border-bottom: 1px solid orange;
+			}
+			li{
+				line-height: 50px;
+				text-align: center;
+				font-size:20px ;
+				font-weight: bold;
+				float: left;
+				width: 200px;
+			}
+			.active{
+				background: orange;
+			}
+			.non{
+				display: none;
+			}
+			.show{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li class="active">男装</li>
+				<li>女装</li>
+				<li>配饰</li>
+			</ul>
+			<div class="non show">衬衫 T恤 牛仔裤 休闲裤 短裤 针织衫 西服 西裤 西服套装 马甲</div>
+			<div class="non">运动裤 真皮皮衣 仿皮皮衣 风衣 羊毛衫 羊绒衫 毛呢大衣 中老年男装 大码男装 工装 加绒裤 唐装</div>
+			<div class="non">大码男装 工装 加绒裤 唐装/中山装 设计师/潮牌</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$("li").click(function(){
+				var index=$(this).index();
+				$(".non").eq(index).addClass("show").siblings().removeClass("show"); //这里不能使用$(this)因为点击的不是这些div，，所以需要获得索引值。。。。。
+//			    $(this).css("background-color","white");  这段代码的问题是当点击后变了但是离开后还要在写事件，让其回复原来的样式，
+                //修改为如下代码
+                $(this).addClass("active").siblings().removeClass("active");
+            
+			})
+		</script>
+	</body>
+</html>

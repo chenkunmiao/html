@@ -1,0 +1,206 @@
+ <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab标签切换效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+        }
+        body {
+            font: 12px/1.5 Tahoma;
+        }
+        .tab_change {
+            width: 1530px;
+            height: 35px;
+            padding: 6px 0 0 0;
+            margin: 100px auto;
+            position: relative;
+            background: #e1edf6;
+        }
+
+        #tab {
+            height: 29px;
+            position: absolute;
+            z-index: 100;
+        }
+        #tab li {
+            float: left;
+            height: 29px;
+            cursor: pointer;
+            line-height: 29px;
+            padding: 0 20px;
+            margin-right: 10px;
+            background: #f0f5f9;
+            border: solid 1px #bfd2e0;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+        }
+
+        #tab li.current {
+            color: #000;
+            background: #fff;
+            height: 30px;
+        }
+        #tab:nth-child(1) {
+            margin-left: 43px;;
+        }
+
+        #content {
+            border-top: 1px solid #bfd2e0;
+            position: absolute;
+            z-index: 1;
+            margin-top: 30px;
+            background: #fff;
+            width: 1530px;
+        }
+        #content li {
+            line-height: 25px;
+            display: none;
+            border-right: 4px solid #e1edf6;
+            border-left: 4px solid #e1edf6;
+            border-bottom: 1px solid #e1edf6;
+            padding: 10px 39px 7px 39px;
+        }
+    </style>
+</head>
+<body>
+<div class="tab_change">
+    <ul id="tab">
+        <li>详情</li>
+        <li>记录</li>
+        <li>管理</li>
+        <li>明细</li>
+        <li  class="current">推荐</li>
+        <li>奖励</li>
+        <li>积 分</li>
+        <li>优惠券</li>
+        <li>资料</li>
+        <li>用户</li>
+    </ul>
+    <ul id="content">
+        <li >
+            详情
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut mollitia sunt vero voluptates! Esse
+            expedita fuga in odit officiis ullam! Aperiam atque deleniti ea earum ipsum libero nam placeat.
+        </li>
+        <li>
+            记录
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, eos fuga id laboriosam nesciunt nihil
+            pariatur quas sit soluta velit! Consequuntur debitis dignissimos ea eveniet ipsam neque non numquam quia.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            voluptatibus. Consectetur distinctio, magni maiores nam praesentium sed sit? Dicta eligendi facilis fugiat
+            libero possimus quisquam?
+        </li>
+        <li>
+            管理
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            voluptatibus. Consectetur distinctio, magni maiores nam praesentium sed sit? Dicta eligendi facilis fugiat
+            libero possimus quisquam?
+        </li>
+        <li>
+            明细
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            voluptatibus. Consectetur distinctio, magni maiores nam praesentium sed sit? Dicta eligendi facilis fugiat
+            libero possimus quisquam?
+        </li>
+        <li style="display:block;">
+            <!--推荐-->
+            <table>
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>类型</th>
+                    <th>性别</th>
+                    <th>爱好</th>
+                    <th>说明</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>xxxxx</td>
+                    <td>男</td>
+                    <td>玩</td>
+                    <td>xxxxxx</td>
+                    <td></td>
+                </tr>
+                <tr>
+                       <td>2</td>
+                    <td>xxxxx</td>
+                    <td>女</td>
+                    <td>吃</td>
+                    <td>xxxxxx</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            奖励
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            voluptatibus. Consectetur distinctio, magni maiores nam praesentium sed sit? Dicta eligendi facilis fugiat
+            libero possimus quisquam?
+        </li>
+        <li>
+            积分
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            voluptatibus. Consectetur distinctio, magni maiores nam praesentium sed sit? Dicta eligendi facilis fugiat
+            libero possimus quisquam?
+        </li>
+        <li>
+            优惠券
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            voluptatibus. Consectetur distinctio, magni maiores nam praesentium sed sit? Dicta eligendi facilis fugiat
+            libero possimus quisquam?
+        </li>
+        <li>
+            资料
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            voluptatibus. Consectetur distinctio, magni maiores nam praesentium sed sit? Dicta eligendi facilis fugiat
+            libero possimus quisquam?
+        </li>
+        <li>
+            用户
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eveniet iste omnis reprehenderit, vero
+            voluptatibus. Consectetur distinctio, magni maiores nam praesentium sed sit? Dicta eligendi facilis fugiat
+            libero possimus quisquam?
+        </li>
+
+    </ul>
+</div>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    $(function () {
+        window.onload = function () {
+            var $tab_li = $('#tab li');
+            var $con_li = $('#content li');
+            $tab_li.click(function () {
+//              var $this = $(this);
+//              var $t = $this.index();
+                var index=$(this).index();
+//              $tab_li.removeClass();
+//              $this.addClass('current');
+                $(this).addClass('current').siblings().removeClass('current');
+                $con_li.css('display', 'none');
+                $con_li.eq(index).css('display', 'block');
+                
+            })
+        }
+    });
+</script>
+
+</body>
+</html>
