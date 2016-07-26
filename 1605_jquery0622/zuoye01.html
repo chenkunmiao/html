@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			li{height: 40px;}
+			
+		</style>
+		<script src="../js_contect/jquery-3.0.0.js"></script>
+		<script src="../js_contect/jquery-1.12.3.js"></script>
+		<script src="../js_contect/jquery-2.2.3.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li><a class="cure" href="#" title="超链接111111">治疗H7N9禽流感</a></li>
+				<li><a class="cure" href="#"title="超链接22222222222">从乞丐的八卦故事</a></li>
+				<li><a href="#"title="超链接333333333">韩国总统表示将与朝鲜对话</a></li>
+				<li><a href="#"title="超链接444444">习近平检阅海军驻三亚部队</a></li>
+				<li><a href="#"title="超链接555555555">禽流感高危</a></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+				
+		
+		
+			$(function(){
+				var x = 10;
+				var y = 20;
+			
+				//创建<div>元素
+				var div = $("<div></div>");
+				
+				//console.log(div);
+				div.css("background","yellow");
+				$("a").mouseenter(function(e){				
+					//定义一个myTitle 
+			//		console.log(this.title);
+					this.myTile = this.title;
+					
+					div = div.html(this.title);
+			//		console.log(this);
+					$(this).parent().append(div);//将它追加到文档中
+			//		console.log(div);
+			    	div.css({
+							"background":"yellow",
+					    	"position":'absolute',
+					    	"width":180+"px",
+					    	"top":e.pageY+y,
+					    	"left":e.pageX + x,
+					    	
+					    });//设置x坐标和y坐标，并且显示
+					  
+				}).mouseout(function(){
+					this.title = this.myTile;
+					div.remove();  //移除
+				}).mousemove(function(e){
+					div.css({
+							"top": e.pageY+y,
+							"left":e.pageX+x,
+						});
+				});
+				
+				
+				
+				
+				
+//				$("li").css("height","30px");
+//				//var jqA = $("ul a");
+//				$("li").css("position","relative");
+//			//	console.log(jqA.html())
+//				$("ul p").css("display","none")
+//				$("ul a").each(function(index,elem){
+//					this
+//					
+//				}).bind('mouseover',function(e){
+//					$("ul p").css("position","absolute");
+//					$("ul p").css("display","block");
+//					$("a").css("text-decoration","none");
+					
+//				});
+				
+			});
+		</script>
+	</body>
+</html>
